@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css head 방식 </title>
+    <!-- css 정의 -->
+    <style type="text/css">
+    /* 태그명 {속성1:값1;속성2:값2;} */
+    /* h1 태그에 밑줄을 그어라 */
+    /* 밑줄과 관련된 css 속성
+        text-decoration:underline, none
+         */
+    h1{text-decoration:underline;color: blue;}
+    /* h2 태그가 삽입되면 글자 크기를 30px, 가운데 정렬해라 */
+    /* 글자크기 font-size:숫자(px)
+        글자 정렬 text-align:center,right,left
+     */
+     h2{font-size: 30px;text-align: center;}
+     /* p 태그를 삽입하면 자동으로 글자 크기는 9pt,
+        줄간격 line-height 200%,
+        글자 색상은 #666666
+     */
+     p{font-size: 9pt; line-height: 200%;
+     color: #666666}
+     /* 클래스 방식으로 선택자 등록하기 
+     .클래스이름{속성1:값1;속성2:값2;}
+     */
+     /* 밑줄 + 글자색상 + 진하게
+        글자를 진하게 하려면
+        font-weight:bold
+      */
+     .listStyle{text-decoration: underline;color: teal;
+     font-weight: bold}
+     /* div 적용할 클래스1 */
+     .div1 {background: red;color: white;}
+     /* div 적용할 클래스1 */
+     .div2 {background: blue;color: white;}
+     /* 아이디 선택자 
+        #아이디 이름{속성1:값1;속성2:값2;}
+     */
+     /* 테이블의 전체 크기를 500px, 테두리 적용 */
+     /* 테두리 관련 속성
+        border-width:테두리굵기px
+        border-color:색상명
+        border-style:solid/none/dotted/dashed/double
+        border:테두리굵기 테두리스타일 테두리색상
+
+        상단 테두리 적용
+        border-top:테두리굵기 테두리스타일 테두리색상
+        하단 테두리 적용
+        border-bottom:테두리굵기 테두리스타일 테두리색상
+        좌츨 테두리 적용
+        border-left:테두리굵기 테두리스타일 테두리색상
+        우측 테두리 적용
+        border-right:테두리굵기 테두리스타일 테두리색상
+      */
+     #table1 {width: 500px; /*border-width: 5px;
+     border-style: solid;border-color: red;*/
+     border:5px solid red;}
+     /* 가변 크기 50%, 이중테두리선 적용 */
+     #table2 {width: 50%;/* border-width: 5px;
+     border-style: double;border-color: green;*/
+        border-top: 5px double hotpink;
+        border-bottom: 5px double teal;}
+        /* 트리 선택자 - 부모요소가 id인 경우 */
+        /* 아이디 box1안에 있는 h3 태그 디자인해라
+            배경색상, 글자 색상, 가로크기 200px 
+         */
+         #box1 h3{background: sienna;color: steelblue;
+         width: 200px;}
+         /* 
+            아이디 box2안에 있는 li를 디자인해라
+            밑줄, 글자색상
+          */
+         #box2 ul li{text-decoration: underline; color:springgreen;}
+         /* 
+            클래스가 t1인 테이블을 디자인해라
+          */
+          /* 테이블 안에 있는 셀사이 여백 합치기
+            table에 적용할것
+             */
+          .t1 { width: 500px; border-collapse:collapse } /* table - 500px */
+          .t1 tr {} /*table tr - 하단에만 점선 테두리 생성 */
+          .t1 tr td { background:tomato;
+            border-bottom: dashed 1px black} /* table tr td */
+
+            /* 
+                클래스가 t2인 테이블을 디자인해라
+                셀안의 내용은 중앙정렬, 사방테두리, 셀사이여백을 없애라
+             */
+             .t2 {border-collapse:collapse; width: 400px}
+             /* td 셀 상하좌우 모두 테두리 처리 */
+             .t2 tr td { border:1px solid blue;
+                        text-align: center }
+            /* 테이블안의 특정셀에 적용할 클래스 */
+            .bgCell {background: blueviolet}
+
+            /* 하이퍼링크 디자인을 변경하여라
+                보통,방문 상태일 경우 밑줄 없음. 글자색상 검정
+                가져다대면 밑줄 생성 후 글자색상은 녹색. 밑줄 표시
+             */
+             /*
+             a:link { text-decoration:none ;color: black}
+             a:visited { text-decoration:none ;color: black}
+             a:hover { text-decoration: underline;color: green }
+             a:active { text-decoration: underline;color: green }
+                */
+            a:link,a:visited {text-decoration:none ;color: black}
+            a:hover,a:active {text-decoration: underline;color: green}
+    </style>
+</head>
+<body>
+<h1>CSS 셀렉터1</h1>
+<h1>CSS 셀렉터2</h1>
+<h2>제목 2-1</h2>
+<h2>제목 2-2</h2>
+<p>
+    문단1입니다. <br>
+    문단1입니다. <br>
+    문단1입니다. <br>
+    문단1입니다. <br>
+    문단1입니다.
+</p>
+<hr>
+<p style="background: tomato">
+    문단2입니다. <br>
+    문단2입니다. <br>
+    문단2입니다. <br>
+    문단2입니다. <br>
+    문단2입니다. 
+</p>
+<hr>
+<ul>
+    <li class="listStyle">국어</li>
+    <li>영어</li>
+    <li class="listStyle">수학</li>
+    <li>과학</li>
+    <li class="listStyle">사회</li>
+</ul>
+<hr>
+<div class="div1">
+    <h3>div1</h3>
+    <p>div1 입니다.</p>
+</div>
+<div class="div2">
+    <h3>div2</h3>
+    <p>div2 입니다.</p>
+</div>
+<hr>
+<!-- table>(tr>td*2)*2 -->
+<table id="table1">
+    <tr>
+        <td>data</td>
+        <td>data</td>
+    </tr>
+    <tr>
+        <td>data</td>
+        <td>data</td>
+    </tr>
+<table id="table2">
+    <tr>
+    <td>data</td>
+    <td>data</td>
+    </tr>
+    <tr>
+    <td>data</td>
+    <td>data</td>
+    </tr>
+</table>
+<hr>
+<!-- div>h3+ul>li*3 -->
+<div id="box1">
+    <h3>박스1</h3>
+    <ul>
+        <li>도레미</li>
+        <li>파랑새</li>
+        <li>가로수</li>
+    </ul>
+</div>
+<div id="box2">
+    <h3>박스2</h3>
+    <ul>
+        <li>도레미</li>
+        <li>파랑새</li>
+        <li>가로수</li>
+    </ul>
+    </div>
+    <table class="t1">
+        <tr>
+            <td>데이터1</td>
+            <td>데이터2</td>
+        </tr>
+        <tr>
+            <td>데이터3</td>
+            <td>데이터4</td>
+        </tr>
+    </table>
+    <table class="t2">
+        <tr>
+            <td>데이터1</td>
+            <td class="bgCell">데이터2</td>
+        </tr>
+        <tr>
+            <td>데이터3</td>
+            <td>데이터4</td>
+        </tr>
+        </table>
+<hr>
+<ul>
+    <li><a href="https://www.naver.com/">네이버</a></li>
+    <li><a href="https://www.google.co.kr/?hl=ko">구글</a></li>
+    <li><a href="https://www.nate.com/">네이트</a></li>
+    <li><a href="https://www.coupang.com/">쿠팡</a></li>
+</ul>
+        
+</body>
+</html>

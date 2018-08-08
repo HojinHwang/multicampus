@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html 배우기</title>
+</head>
+<body>
+<!-- ctrl+/ = html 주석 삽입 -->
+<!-- h1 ~ h6 
+    : 글자 굵게 표시
+    : 글자 크기 변경
+ -->
+<h1>html 배우기1</h1>
+<h2>html 배우기2</h2>
+<h3>html 배우기3</h3>
+<!-- p
+문단 만들기
+ -->
+<!-- br : 줄바꿈
+    종료태그가 없다.
+    <br>, <br/>
+ -->
+<p>
+    첫번째 문단입니다. 
+    <br /> <br>
+    행을 추가합니다. <br>
+    행을 추가합니다. <br>
+    행을 추가합니다. <br>
+</p>
+<!-- 
+div
+: 블록 생성
+ -->
+
+ </div>
+ <div style="background : red">
+    <h2>블록1<h2>
+    <p>내용입니다.</p>
+</div>
+ <div>
+        <div style="background : green">
+    <h2>블록2</h2>
+    <p>내용입니다.</p>
+ </div>
+ <div>
+        <div style="background : yellow">
+    <h3>블록3</h3>
+    <p>내용입니다.</p>
+    </div>
+<!-- 목록 문단
+ul > li
+ol > li
+ -->
+<!-- ul>li*5 -->
+ <ul>
+     <li>바나나</li>
+     <li>바나나</li>
+     <li>바나나</li>
+ </ul>
+ <!-- ul>li*5 -->
+<ul>
+    <li>파이썬</li>
+    <li>csv</li>
+    <li>html</li>
+    <li>css</li>
+    <li>데이터베이스</li>
+</ul>
+<ol>
+    <li>아침반</li>
+    <li>오후반</li>
+</ol>
+<!-- ol>li*4 -->
+<ol>
+    <li>국어</li>
+    <li>수학</li>
+    <li>영어</li>
+    <li>과학</li>
+</ol>
+<hr>
+<dl>
+    <dt>HTML이란 ?</dt>
+    <dd>웹페이지를 제작하는 마크업 언어
+    </dd>
+</dl>
+<!-- dl>dt+dd -->
+<dl>
+    <dt>css란?</dt>
+    <dd>웹페이지의 디자인을 담당하는 마크업언어</dd>
+    <dt>파이썬의 활용 분야</dt>
+    <dd>웹, 데이터분석</dd>
+<dl>
+<!-- 글자꾸미기 태그들
+    <태그명>글자<태그명>인라인요소
+    인라인 요소 - 줄바꿈 없이
+    한줄에 표시
+-->
+<p>
+    <strong>진하게</strong>
+    <b>진하게</b>
+    <i>기울임</i>
+    <big>한단계 크게</big>
+    <small>한단계 작게  </small>
+</p>
+<hr>
+<!-- 
+    img 필수 속성
+    src= 이미지 경로
+    alt = 대체 텍스트
+ -->
+<img src="image/bg.jpg" alt="배경 그림">
+
+<!-- 
+    하이퍼링크 a
+    href - 이동주소
+    target="_blank" : 새탭으로 주소페이지가 보인다.
+ -->
+<a href="http://goolgle.com">구글</a>
+<a href="http://goolgle.com" target="_blank"></a> 새탭으로 구글</a>
+
+<!-- 이미지 하이퍼링크 -->
+<!-- a>img -->
+<a href="https://www.instagram.com/hojjimin/">
+    <img src="image/if_Instagram_1298747.png" alt="인스타그램">
+</a>
+
+<!-- 테이블 만들기
+    table>tr>td+th
+    tr 갯수에 따라 행 수가 결정
+    tr 안에 있는 td 나 th 수에 따라서 열이 결정된다.
+
+    table 태그안에 들어가는 속성
+    border 는 테두리 굵기
+    cellpadding 는 숫자값이 커질수록 셀안의 여백이 커진다.
+    cellspacing: 셀과 셀사이 간격
+    bordercolor: 테두리 색상
+                : 16진수 색상값(#000000(검정색) ~ #ffffff(흰색))
+                : 영문색상명
+-->
+<h2>2행2열 테이블</h2>
+ <table bordercolor="black" border="1" cellpadding="8" cellspacing="0">
+     <!-- 1행 -->
+     <!-- th = 글자 굵게나옴 -->
+     <tr>
+         <th>1행1열</th> 
+         <th>1행2열</th>
+     </tr>
+     <!-- 2행 -->
+     <tr>
+         <td>2행1열</td>
+         <td>2행2열</td>
+     </tr>
+ </table>
+ <!-- 3행 3열 테이블 만들기 -->
+ <!-- table>(tr>td*3)*3 -->
+ <!-- 셀 합치기 - td, th 태그안에 속성 삽입
+    규칙 : 합친후에는 나머지 셀은 삭제나 주석처리 !!!
+    colspan : 가로 합치기
+    rowspan : 세로 합치기
+-->
+ <h2>3행 3열 테이블</h2>
+ <table width="200" border="1" cellpadding="10" cellspacing="0">
+     <tr>
+     <td colspan="2">1-1 + 1-2</td>
+     <!-- <td>1-2</td> -->
+     <td rowspan="3">1-3</td>
+ </tr>
+ <tr>
+     <td rowspan="2">2-1 + 3-1</td>
+     <td>2-2</td>
+     <!-- <td>2-3</td> -->
+ </tr>
+ <tr>
+     <!-- <td>3-1</td> -->
+     <td>3-2</td>
+     <!-- <td>3-3</td> -->
+ </tr>
+</table>
+
+<h2>4행 4열 - 기본구조</h2>
+<!-- table(tr>td*4)*4 -->
+<table border="1" cellpadding="10" width="200"
+bordercolor="blue" cellspacing="0">
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+</table>
+<hr>
+<h2>4행 4열 - 퀴즈1</h2>
+<!-- table(tr>td*4)*4 -->
+<table border="1" cellpadding="10" width="200"
+bordercolor="green" cellspacing="0">
+    <tr>
+    <td>1-1</td>
+    <td>1-2</td>
+    <td colspan="2">1-3</td>
+    <!-- <td>1-4</td> -->
+</tr>
+<tr>
+    <td>2-1</td>
+    <td>2-2</td>
+    <td>2-3</td>
+    <td rowspan="3">2-4</td>
+</tr>
+<tr>
+    <td>3-1</td>
+    <td>3-2</td>
+    <td rowspan="2">3-3</td>
+    <!-- <td>3-4</td> -->
+</tr>
+<tr>
+    <td>4-1</td>
+    <td>4-2</td>
+    <!-- <td>4-3</td> -->
+    <!-- <td>4-4</td> -->
+</tr>
+</table>
+<hr>
+<h2>4행 4열 - 퀴즈2</h2>
+<!-- table(tr>td*4)*4 -->
+<table border="1" cellpadding="10" width="200"
+bordercolor="pink" cellspacing="0">
+    <tr>
+    <td rowspan="4">1-1</td>
+    <td>1-2</td>
+    <td colspan="2">1-3</td>
+    <!-- <td>1-4</td> -->
+</tr>
+<tr>
+    <!-- <td colspan="">2-1</td> -->
+    <td colspan="2">2-2</td>
+    <!-- <td>2-3</td> -->
+    <td>2-4</td>
+</tr>
+<tr>
+    <!-- <td>3-1</td> -->
+    <td rowspan="2">3-2</td>
+    <td colspan="2">3-3</td>
+    <!-- <td>3-4</td> -->
+</tr>
+<tr>
+    <!-- <td>4-1</td> -->
+    <!-- <td>4-2</td> -->
+    <td>4-3</td>
+    <td>4-4</td> 
+</tr></table>
+<!-- 트리구조 만들기
+    : 목록 문단안에 목록이 있는 구조
+ -->
+ <!-- ul>li*3 -->
+ <ul>
+     <li>그래픽
+         <!-- ol>li*2 -->
+         <ol>
+             <li>포토샵</li>
+             <li>일러스트레이터</li>
+         </ol>
+     </li>
+     <li>OA
+         <ul>
+             <li>엑셀</li>
+             <li>워드</li>
+             <li>파워포인트</li>
+         </ul>
+     </li>
+     <li>프로그래밍
+         <ol>
+             <li>웹</li>
+             <li>파이썬</li>
+         </ol>
+            <li>웹
+             <!-- ul>li*3 -->
+            <ul>
+                 <li>html</li>
+                 <li>css</li>
+                 <li>데이터베이스</li>
+             </ul>
+            </li>
+     </li>
+ </ul>
+
+
+
+
+</body>
+</html>
+

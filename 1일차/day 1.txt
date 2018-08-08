@@ -1,0 +1,178 @@
+파이썬 설치
+VS code 설치
+python , python for vscode , pydev , python extended <- 4개설치
+VS CODE -> Ctrl + Shift + p , :exd 입력후 모듈 설치
+
+파이썬 결과 실행 [F5]
+
+//언어의 종류
+인터프리터 언어 -> 파이썬 ,자바스크립트
+컴파일 언어 -> 자바,C,C++ : 중간 파일 생성
+               자바 -> 컴파일 -> 클래스 파일
+
+http://ideone.com = 온라인상 파이썬 에디터
+모바일C - 앱
+
+// 주석이란?
+Comment
+실행이 되는 코드는 아니다.
+소스에 대한 설명글
+ctrl + /
+# 설명글
+
+//숫자형
+-정수형 (Integer)
+-실수 (Float)
+
+파이썬은 선언시 자료형이 결정된다.
+' 1 ' -> 문자
+1 -> 숫자
+
+산술 연산자 사용
++ - * 
+/ - 실수
+// - 정수 
+% - 나머지값
+
+//퀴즈
+다음과 같이 출력되도록 한다.
+
+------------------------------
+
+5 + 5 = 10
+6 * 6 = 36
+10 - 3 = 7
+100 나누기 3의 나머지는? 1
+--------------------------------
+
+//자료형 - 불른(Boolean)
+True/False
+
+// 자료형 출력하기
+type(값)
+
+//캐스팅이란?(Casting)
+자료형을 변경하는 기능
+
+문자 -> 숫자
+숫자 -> 문자 
+정수 -> 실수
+실수 -> 정수
+
+// 출력문 print(값)
+// 입력문 input -> 문자열
+
+// 변수 (Variable)
+- 값을 저장할 수 있는 공간
+- 변수 이름 지정시 규칙
+ : 첫글자는 영문자
+ : 숫자 , 영문자 , _(언더바) 가능
+ : 키워드 사용불가 (print, input, if , True...)
+- 변수 이름 지정 스타일
+ 카멜 스타일 : 단어별로 대문자 첫글자
+ 예) numberOne
+
+
+ 스네이크 스타일:_사용
+  예) number_one
+
+//연산자 종류
+- 문자열 연산자 : +,*
+- 산술 연산자 : +,-,*,/,//,%,**
+- 관계연산자 : ==,<=,>=,<,>
+- 대입연산자 : 형식 - 산술연산자 =
+  +=
+  -=
+  *=
+  /=
+
+++,-- 증감 연산자는 없다. 
+
+// 출력문 형식 - format() 함수
+
+print('{}{}'.format(값1,값2))
+
+// 출력문 형식 - %서식기호(d,f,s) 이용
+print('%서식기호' % (변수or값))
+
+// 문자열 인덱싱
+문자열변수[start:end:step]
+문자열변수[start:end]
+문자열변수[start:]
+문자열변수[:end]
+
+// 주피터 노트북 설치하기
+0) 탐색기에서 숨긴 폴더 모두 표시되게 지정하기
+아래 폴더가 표시되는지 확인하기
+AppData
+C:\Users\HOJIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.7
+파이썬이 설치된 폴더로 이동하기
+C:\Users\student\AppData\Local\Programs\Python\Python37\Scripts
+탐색기에서 경로 입력창 부분을 클릭하면 경로 복사
+
+1) pip 명령 실행 확인
+C:\Users\student\AppData\Local\Programs\Python\Python37\pythonw.exe "C:\Users\student\AppData\Local\Programs\Python\Python37\Lib\idlelib\idle.pyw"
+
+2) 명령 실행
+pip install notebook
+노란색 글자 부분의 명령어 입력
+python ~ --upgrade
+pip install notebook 한번더 입력
+
+3) 주피터 노트북 실행하기
+ 윈도우 탐색기에서 아래 위치로 이동
+C:\Users\student\AppData\Local\Programs\Python\Python37\Scripts
+
+4) 바로가기 아이콘 -> 바탕화면에 생성
+
+5) 시작위치를 작업폴더로 수정하기
+바로가기 아이콘 마우스 우측버튼 클릭 -> 속성
+[시작위치]는 파일
+
+// 쥬피터 노트북이란 ?
+ 웹 기반의 파이썬 편집 노트
+
+// 주피터 노트북 파일 만들기
+
+// 주석
+
+// 명령 셀 추가와 삭제
+a
+dd
+
+// 실행은 ?
+  [Shift]+[Enter]
+  [Run]
+
+// 마크다운이란 ?
+// 서식 디자인
+
+// 제목
+# Heading1 
+## Heading2
+### Heading3
+
+[ESC]-[M]-[Shift]+[Enter]
+
+// 목록 문단 (블렛 문단)
+- 목록
+- 목록
+
+* 목록
+* 목록
+
+1 목록
+2 목록
+
+
+
+
+
+
+
+
+
+
+
+
+
