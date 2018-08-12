@@ -1,0 +1,145 @@
+//sqlite 설치하기 
+1)https://www.sqlite.org/download.html
+다운로드 :
+sqlite-tools-win32-x86-3240000.zip
+(1.64 MiB)
+2) 별도 폴더 생성  
+  예) sqlite
+   압축해제
+3) 실행하기 
+   sqlite3.exe
+
+//sqlite 클라이언트 도구 설치하기
+1. 프로그램 다운로드  
+http://www.sqliteexpert.com/download.html
+SQLite Expert Personal 64bit
+2. 프로그램 설치 
+
+// 샘플 db 다운로드
+1. 자료 받기 chinook.zip
+2. sqlite 프로그램이 설치된 작업 폴더에 압축해제 
+3. 파일 이름 변경 - test.db
+
+// sqlite3 조작어 
+- sqlite3 프로그램 조작 명령어 
+- 스타일 .명령어
+- .help (명령어보기)
+
+- 데이타베이스 열거나 새로 생성 
+.open 데이타베이스이름.db
+
+- 데이타베이스안에 모든 테이블 조회 
+.table 
+
+- 프로그램 종료 
+.quit
+
+- 테이블 조회시 컬럼명 표시 및 컬럼과컬럼사이 공백 표시 
+.header on 
+.mode column
+
+
+//SQL 
+- 표준. 데이타베이스안의 테이블 생성, 삭제, 조회, 수정] 
+- 오라클, mySQL, mariaDB에서도 사용 가능 
+- 형식 
+  명령어;
+
+>> 테이블 조회 
+- 테이블안에 있는 모든 레코드 조회
+select * from 테이블이름;
+
+- 레코드를 수를 5개로 제한하여 조회
+select * from 테이블이름 limit 5;
+
+- 테이블에서 특정 컬럼의 레코드만 추출해서 조회하기 
+select 컬럼명1,컬럼명2 테이블이름;
+
+- 조건에 맞는 레코드만 추출하기 
+select * from 테이블이름 where 조건;
+
+and, or, not,비교연산자(<,>,==)
+
+// Title 컬럼값이 'Sales Support Agent'인 레코드만 표시  
+select * from employees 
+  where Title='Sales Support Agent';
+
+// 5개만 조회 + Title='Sales Support Agent'
+select * from employees 
+  where Title='Sales Support Agent' 
+  limit 5;
+
+//5개만 조회 + 컬럼명(LastName, Title)
+//+ Title='Sales Support Agent'
+
+select LastName,Title from employees 
+  where Title='Sales Support Agent' 
+  limit 5;
+
+//퀴즈 1
+employees 테이블에서 EmployeeID를 
+기준으로 2~4의 레코드 조회  
+select * from employees
+  where EmployeeID<5 and EmployeeID>1;
+
+//퀴즈 2
+employees 테이블에서 
+Title='Sales Support Agent' 이거나 
+City='Calgary' 인 레코드를 5개만 조회
+
+select * from employees
+  where Title='Sales Support Agent' 
+    or City='Calgary' limit 5;
+
+//데이타베이스 새로 만들기 
+.open 데이타베이스이름.db
+
+.open naverDB.db
+
+윈도우탐색기에서 sqlite 폴더에 db가 생성되었는지 확인하기 
+
+//테이블 생성하기 
+create table 테이블이름(컬럼명 데이타형식,...);
+
+데이타형식 - int, text(숫자), char(숫자)
+
+create table
+  userTable(id char(5), username char(15),
+  email char(15), birthYear int);
+
+.table - 데이타베이스 테이블 목록 보기 
+.schema 테이블이름 - 테이블 구조 표시 
+
+//테이블안에 레코드 삽입하기 
+insert into 테이블이름 values(컬럼값1,컬럼값2...);
+
+insert into userTable 
+ values('j0001','김순돌','dododo@naver.com',2000);
+
+select * from userTable;
+
+//테이블안에 레코드 삭제하기 
+delete frome 테이블명 where 컬럼명=데이터값;
+
+delete from userTable where id='j0001';
+
+// 레코드 값 수정하기 
+update 테이블이름 set 컬럼명1=새값
+  where 컬럼명2=값;
+
+
+update userTable
+  set email='upsdsd@gmail.com'
+  where username = '김청아';
+
+// 퀴즈 
+1) 테이블 생성 - productTable
+2) 데이타 입력
+3) 1번 데이터의 제품코드를 
+   pp0001로 수정하여라 
+4) 마지막 데이터를 삭제하여라 
+5) price 컬럼 값이 3인 
+   데이터를 2개 추가로 입력하여라     
+6) price 컬럼 값이 3인 레코드만 
+   출력하여라    
+     

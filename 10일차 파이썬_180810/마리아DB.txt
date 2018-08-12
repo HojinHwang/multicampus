@@ -1,0 +1,97 @@
+// 설치 
+1) 마리아DB 프로그램 다운로드
+downloads.mariadb.org
+2) 다운로드 받은 프로그램 실행 
+3) 설치시 주의 사항)
+   관리자 비번 입력 - 1234
+   utf-8 선택
+
+ // 마리아DB 접속하기 
+ 1) MariaDB - MySQL Client 클릭 
+ 2) 창에서 관리자비번 입력
+
+ //터미널창(프롬프트창)에서 접속하기 
+ 1) 경로확인 
+C:\Program Files\MariaDB 10.3\bin
+ 2) mysql -u root -p
+    비번 입력 
+
+// MariaDB - MySQL Client
+exit - 나가기. 프로그램종료
+show databases; - 저장되어 있는 데이타베이스 확인하기 
+show tables; - 데이타베이스 안에 테이블 보기 
+
+데이타베이스 만들기 :
+create database 데이타베이스이름;
+
+생성된데이타베이스 사용하기 
+use 데이타베이스이름;
+
+
+// Sample DB 받은 후 데이타베이스에 임포트하기
+1) m.sql 
+2) 터미널창에서 다음 명령 실행 
+   위치 : C:\Program Files\MariaDB 10.3\bin
+   입력 
+   mysql classicmodels < C:\pyclass\m.sql -u root -p
+   비번입력 
+3) 확인하기 
+.. 마리아DB 접속
+mysql -u root -p
+... 데이베이스 변경
+use classicmodels;
+... 테이블 확인하기
+show tables;
+
+// 데이타 조회하기 
+select * from 테이블명 limit 5;
+select 컬럼명 from 테이블명;
+
+//테이블의 구조확인하기 - 컬럼명과 데이타타입
+describe 테이블명;
+
+// country = usa - offices
+
+//하이디 SQL 데이타베이스 접속하기 
+- 프로그램 실행
+
+//테이블 생성하기 
+create table 테이블이름(컬럼명 데이타형식,...);
+
+데이타형식 - int, text(숫자), char(숫자)
+
+create table
+  userTable(id char(5), username char(15),
+  email char(15), birthYear int);
+
+생성된 테이블 확인은?
+  show tables;
+
+생성된 테이블 구조 확인은?
+ describe 테이블이름;
+ ex) describe userTable;
+
+//테이블안에 레코드 삽입하기 
+insert into 테이블이름(컬럼명1,컬럼명2...) 
+   values(컬럼값1,컬럼값2...);
+
+ex) insert into 
+    userTable(id, username, email, birthYear)
+     values('hooo1','도민영','mk@naver.com',2000);
+
+결과확인은?
+   select * from userTable;
+
+//테이블안에 레코드 삭제하기 
+delete frome 테이블명 where 컬럼명=데이터값;
+
+delete from userTable where birthYear=2010;
+
+//테이블안의 레코드 값 수정하기 
+// 레코드 값 수정하기 
+update 테이블이름 set 컬럼명1=새값
+  where 컬럼명2=값;
+
+update userTable
+  set email='upsdsd@gmail.com'
+    where id = 'gumi';

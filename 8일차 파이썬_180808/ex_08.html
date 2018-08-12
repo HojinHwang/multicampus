@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 외부 정의</title>
+    <!-- link:css -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<h1>CSS 외부 정의</h1>
+<h2>직계 선택자 </h2>    
+<!-- div>h2+div>h3+div>h4     -->
+<div id="box1">
+    <h2>box1</h2>
+    <div>
+        <h3>box1-1</h3>
+        <div>
+            <h4>box1-1-1</h4>
+        </div>
+    </div>
+</div>  
+<hr>
+<h2> css 레이아웃 </h2>
+<!-- div>div*3 -->
+<div id="box2">
+    <div>box1</div>
+    <div>box2</div>
+    <div>box3</div>
+</div>
+<!-- 슬라이드2번 레이아웃 -->
+<!-- div#box3>div*3 -->
+<div id="box3">
+    <div>top</div>
+    <div>left</div>
+    <div>right</div>
+</div>
+<!-- 슬라이드3번 레이아웃 -->
+<!-- div#box4>div*5 -->
+<div id="box4">
+    <div>top</div>
+    <div>left</div>
+    <div>right</div>
+    <div>center</div>
+    <div>footer</div>
+</div>
+
+<!-- 슬라이드4번 레이아웃 -->
+<!-- div#box5>div*5 -->
+<div id="box5">
+    <div>top</div>
+    <div>left</div>
+    <div>center</div>
+    <div>right</div>
+    <div>bottom</div>
+</div>
+
+</body>
+</html>

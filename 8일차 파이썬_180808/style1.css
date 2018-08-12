@@ -1,0 +1,149 @@
+/* css 문서  */
+/* 자손 선택자
+box1 아이디안의 모든 div
+*/
+#box1 div { 
+    background:red;
+    border:1px solid black}
+
+/* 직계 선택자 
+box1 아이디안의 2단계 밑에 있는 
+div
+*/    
+#box1>div>div {
+    color:white;
+    font-size:30px
+}
+
+/* 레이아웃 */
+#box2 {width:600px;
+    height:400px;
+    background:yellow;
+    /* margin-left:50px */
+    /* 웹브라우저 중심으로 
+     중앙정렬  */
+    margin:0 auto
+    }
+#box2 div { 
+    width:200px;
+    height:200px;
+    background:lightpink;
+    border:1px solid black}
+/* #box2 기준 왼쪽 배치 */
+#box2 div:first-child {
+    float:left
+} 
+/* #box2 기준 오른쪽 배치 */
+#box2 div:nth-child(2) {
+    float:right
+} 
+/* 부유레이아웃 해제 */ 
+#box2 div:nth-child(3) {
+    clear: both;
+}  
+
+/* 레이아웃 퀴즈1 */
+#box3 {width:700px;
+    margin:10px auto}
+#box3 div:nth-child(1) {
+border:1px solid black;
+background:lightcoral;
+height:100px;
+margin-bottom:10px
+}
+
+#box3 div:nth-child(2) {
+    border:1px solid black;
+    background:lightblue;
+    height:600px;
+    float:left;
+    width:30%    
+}
+
+#box3 div:nth-child(3) {
+    border:1px solid black;
+    background:lightblue;
+    height:600px;
+    float:right;
+    width:67%        
+}
+
+/* 레이아웃 퀴즈2 */
+#box4 {
+    /* 레이아웃퀴즈1번에서 
+    지정한
+    부유 레이아웃 해제 */
+    clear: both;
+    width:700px;
+    margin:10px auto
+}
+
+#box4 div:first-child {
+    background:lightgray;
+    height:150px
+}
+#box4 div:nth-child(2) {
+    background:lightgreen;
+    height:250px;
+    float:left;
+    width:65%;
+    margin-bottom:10px
+}
+#box4 div:nth-child(3) {
+    background:lightgreen;
+    height:250px;
+    float:right;
+    width:33%;
+    margin-bottom:10px
+}
+#box4 div:nth-child(4) {
+    background:lightpink;
+    height:350px;
+    clear:both;
+}
+#box4 div:nth-child(5) {
+    background:lightpink;
+    height:100px;
+    margin-top:10px
+}
+
+/* 레이아웃 퀴즈3 */
+#box5 {
+    width: 800px;
+    margin:10px auto;
+    
+}
+#box5 div {
+  border:1px solid black;
+  /* 테두리까지 합해서
+    가로 크기 지정 */
+  box-sizing:border-box;
+}
+
+#box5 div:first-child {
+    background:lightgray;
+    height:100px
+}
+#box5 div:nth-child(2),
+#box5 div:nth-child(3),
+#box5 div:nth-child(4) {
+    height:500px;
+    float: left;
+}
+
+#box5 div:nth-child(2),
+#box5 div:nth-child(4) {
+    background:lightpink;
+    width:20%
+}
+
+#box5 div:nth-child(3) {
+    background:lightskyblue;
+    width:60%
+}
+
+#box5 div:nth-child(5) {
+    height:80px;
+    background:lightgoldenrodyellow;
+    clear:both
+}
