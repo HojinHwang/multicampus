@@ -1,0 +1,29 @@
+//설치하기 
+터미널창에서 파이썬이 설치되어 있는 폴더의 Scripts
+cd C:\Users\student\AppData\Local\Programs\Python\Python37\Scripts
+
+pip install flask
+pip list
+
+//파이썬 파일 만들어 확인하기 - f_01.py
+# 플라스크 모듈 불러오기 
+from flask import Flask
+
+
+// 웹서버 
+1) 유료 - 웹서버를 제공하는 업체 할당. 서비스 이용 
+2) 작업 컴퓨터 -> 웹서버 
+   웹상의 사이트 
+   데이타 베이스 접근 
+   ...
+
+// 웹서버 프로그램 종류 
+오라클+IBM
+자바+jsp+DB
+php+아파티웹서버+mariaDB
+파이썬기반 플라스크, 장고 + mariaDB
+
+
+
+flask.pocoo.org
+
