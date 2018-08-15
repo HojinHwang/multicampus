@@ -1,0 +1,106 @@
+﻿// 부트스트랩 샘플 이용하기 - CSS 디자인 변경하기 
+1) templates 폴더 
+https://startbootstrap.com
+https://startbootstrap.com/template-overviews/agency/
+다운로드 - agency_bootstrap 폴더 압축해제
+2) 
+
+33번째 줄 - 글자 색상 변경하기 
+<a class="navbar-brand js-scroll-trigger" href="#page-top" 
+style="color:white" >
+FLASK START</a>
+
+76번째 줄 - 배경 적용하기 
+<h2 class="section-heading text-uppercase" 
+ style="background:gold;padding:10px;width:250px;margin:0 auto">Services</h2>
+
+77번째 줄 - 상단 여백지정하기 (padding-top, margin-top)
+Lorem ipsum dolor sit amet consectetur.
+
+220번째 줄 - 타원 이미지의 외곽선 변경하기 
+            border:선색상 굵기 스타일
+<div class="timeline-image" style="border-color:black">
+
+305번째 줄 - 트위터 버튼 배경 색상 교체 
+<a href="#" style="background:red">
+   <i class="fa fa-twitter"></i>
+</a>
+
+
+443번 버튼 글자 색상 변경하기 
+<button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" style="color:black">
+</button>
+
+
+퀴즈) f_04.py 에 연결되는 index.html에서 
+디자인 수정하기 
+
+
+2) 'PORTFOLIO' 글자 색상 교체하기
+3) 하단에 send 버튼 스타일 변경하기 
+1) 상단 메뉴바 색상 교체하기 
+
+
+# 인클루드 기능이란?
+- 자주 사용되는 소스부분을 별도의 html로 생성 
+- 필요한 부분에 삽입
+
+1) f_06.py -> index_main.html <- sub.html
+2) 기본 문법 - html 문서 
+{% include "인클루드시킬파일경로" %}
+예) {% include "sub.html" %}
+
+//퀴즈 
+상단 + 컨텐츠 + 하단
+f_07.py -> index_main2.html <- top.html,footer.html 
+
+상단 - top.html : 인클루드로 삽입 
+      (메뉴, 제목)
+컨텐츠 - 내용물삽입
+하단 - footer.html : 인클루드로 삽입 
+       
+// 값 전달 
+// 파이썬파일 변수 -> html 
+// 파이썬에서 값 전달 ->html 
+// 파이썬파일에서 값전달과 관련된 변수 선언 
+// 렌더템플릿 함수 안에서 변수1=변수2
+// html 파일에서 표시 
+   {{ 변수2  }}
+
+
+// 브라우저에서 값 전달하기 
+
+http://127.0.0.1:5000/gift/홍수철
+
+홍수철님 '이번달 상품 ' 꽝
+
+// request(요청) - response(응답)
+
+html    ---  버튼 --- 다른페이지에 출력  
+폼요소 
+
+form_submit.html   -  f_response.py  - form_result.html
+ ( html )                          (response)           (결과)
+
+
+
+// 퀴즈 - 
+Name , EmailAddress, 
+PhoneNumber, Message
+입력한 후 테이블 안에 표시한다. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       
