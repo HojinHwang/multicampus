@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>if_else_result3.html</title>
+</head>
+<body>
+<h1>if 조건문 이용하기</h1>  
+<p> Age : {{age}} </p>  
+<p>
+    <!-- score 값에 따라 조건문 실행하기  -->
+    {% if age >= 20 %}
+    <span>성인입니다.</span>
+    {% elif 17<= age <= 19 %}
+    <span>고등학생입니다. </span>
+    {% elif 13 <= age <= 16 %}
+    <span>중학생입니다. </span>
+    {% elif 8<= age <= 12 %}
+    <span>초등학생입니다. </span>        
+    {% else %}
+    <span>어린이집에 다닙니다.</span>
+    {% endif %}
+</p>
+<p> <a href='/'>홈으로 이동</a></p>
+    
+</body>
+</html>

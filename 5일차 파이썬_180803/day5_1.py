@@ -24,20 +24,20 @@ print(data)
 f.close()
 '''
 # with 문으로 파일을 읽고 출력하기
-with open('data/Yesterday.txt','r') as f:
+with open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\Yesterday.txt','r') as f:
     data = f.read()
     print(data)
 
 # with 문으로 파일을 읽고 한줄만 출력하기
 print('*'*30)
-with open('data/애국가.txt','r') as f:
-    data = f.readline()
+with open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\애국가.txt','r') as f:
+    data = f.readline() # 맨 첫줄 한줄 출력
     print(data)
 
 # with 문으로 파일을 읽고 리스트로 변환하여 출력하기
 print('*'*30)
-with open('data/애국가.txt','r') as f:
-    data_list = f.readlines()
+with open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\애국가.txt','r') as f:
+    data_list = f.readlines() # 처음에 read 할지 readlines 할지 정하는듯.
     print(data_list,type(data_list))
     # 리스트 출력하기
     cnt = 1
@@ -53,15 +53,15 @@ f.close()
 
 # with 문으로 파일 생성후 문자열과 리스트 저장하기
 print('-'*30)
-with open('data/result_0803.txt','w') as f:
+with open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\result_0803.txt','w') as f:
     f.write('오늘은 금요일 .....\n쉬는시간 신이만든시간')
     msg = '\n\n쉬는시간 신이만든시간'
-    f.write(msg)
+    f.write(msg) # = f.write('\n\n쉬는시간 신이만든시간')
 
 # wiht 문으로 파일 생성후 문자열과 리스트 저장하기
 print('-'*30)
 fruits = ['바나나','사과','포도']
-with open('data/result_0803.txt','w') as f:
+with open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\result_0803.txt','w') as f:
     f.write('오늘은 금요일 .....\n쉬는시간 신이만든시간')
     msg = '\n\n쉬는시간 신이만든시간'
     f.write(msg)
@@ -72,12 +72,12 @@ with open('data/result_0803.txt','w') as f:
 # 외부 텍스트 파일을 읽어서 새로운 파일에 저장하기
 print('-'*30)
 # 데이터 읽기
-with open('data/Yesterday.txt','r') as f:
+with open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\Yesterday.txt','r') as f:
     data = f.read() # 문자열
 
 # 데이터 쓰기
 print('-'*30)
-with open('data/result_ys.txt','w') as f:
+with open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\result_ys','w') as f:
     f.write(data)
 
 # 퀴즈
@@ -85,17 +85,17 @@ with open('data/result_ys.txt','w') as f:
 Yesterday.txt 파일에서 1번째줄만 result.txt 파일에 저장하여라
 '''
 
-with open('data/Yesterday.txt','r') as f:
+with open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\Yesterday.txt','r') as f:
     data = f.readline()
     print(data)
 
 
 # 기존 파일에 내용 추가
 # open(파일경로,'a') - append
-with open('data/애국가.txt','a') as f:
+with open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\애국가.txt','a') as f:
     f.write(' \n\n새로운 내용 추가 ')
 
-f2 = open('data/애국가.txt','a')
+f2 = open('C:\\Users\\HOJIN\\Desktop\\multicampus\\data\\애국가.txt','a')
 f2.write(' \n\n새로운 내용 추가 ')
 f2.close()
 

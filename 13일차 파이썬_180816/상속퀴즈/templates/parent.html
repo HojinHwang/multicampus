@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Parent.html</title>
+    <style>
+        #navi {background:coral; text-align:center}
+        #navi li { display:inline-block; padding:5px 10px}
+        #container h1 { text-align:center; color:darkred; 
+                        text-decoration:underline}
+        #container p {font-size:14pt; 
+                       /* 글자와 글자사이 간격 */ 
+                       letter-spacing:10px }       
+        #galleryBox { text-align:center}                                        
+    </style>
+</head>
+<body>
+<h1>템플릿 상속</h1>    
+<!-- ul>(li>a{메뉴})*3 -->
+<ul id="navi">
+    <li><a href="/">홈</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/data">Data</a></li>
+</ul>
+<div id="galleryBox">
+<!-- 이미지파일 test.jpg -->
+<img src="/static/test.jpg" alt="test.jpg">
+</div>
+<div id="container">
+<!-- 상속을 받을 파일 블록 : 교체영역 -->
+{% block content %}
+{% endblock %}
+</div>
+    
+</body>
+</html>

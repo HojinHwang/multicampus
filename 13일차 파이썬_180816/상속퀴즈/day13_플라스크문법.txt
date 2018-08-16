@@ -1,0 +1,33 @@
+HTML에서 파이썬 연동 문법
+{{ 변수 }}
+
+{% include '파일경로' %}
+
+{% if 조건문 %}
+{% endif %}
+
+{% for 변수 in 리스트 %}
+{% endfor %}
+
+상속 - 부모파일의 코딩소스를 그대로 복사한다. 
+{% extends '부모파일경로' %}
+
+//샘플예제 
+f_18_extends.py -> 자식파일호출(index_extends.html) 
+자식파일호출1(index_extends.html) <- 부모파일(parent.html)
+자식파일호출2(about_child.html)  <- 부모파일(parent.html)
+
+부모파일 형식 : 
+내용물 교체 영역에는 아래와 같은 형식으로 지정 
+{% block content %}
+{% endblock %}         
+
+//퀴즈 - 상속을이용한사이트 제작 
+1) 사이트에서 자료 받기 - 압축해제 
+2) 이미지는 작업폴더 기준으로 
+   /static/quiz 폴더에 모두 복사 
+3) 파이썬 파일 -> f_19_extends_quiz.py
+   상속 부모 파일 ->  quiz_layout.html
+   자식 파일  : Showcase(첫페이지) / Service / Designers / 
+                Packages/ Contact
+4) CSS - 공통                 

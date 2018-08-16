@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>if_else_result2.html</title>
+</head>
+<body>
+<h1>if 조건문 이용하기</h1>  
+<!--
+#  0 < score2 < 20  -> 20보다 작습니다.
+#  score2 >= 20 -> 20보다 크거나 같습니다.
+-->
+<p>Score : {{score2}} </p>  
+<p>
+    <!-- score 값에 따라 조건문 실행하기  -->
+    {% if  0 < score2 < 20 %}
+    <span>20보다 작습니다.</span>
+    {% elif score2 > 20 %}
+    <span>20보다 큽니다.</span>
+    {% else %}
+    <span>20입니다.</span>
+    {% endif %}
+</p>
+<p> <a href='/'>홈으로 이동</a></p>
+
+    
+</body>
+</html>
