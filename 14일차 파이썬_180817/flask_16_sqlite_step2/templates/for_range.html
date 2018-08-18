@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        #wrap {
+            width:500px;
+            text-align: center;
+            margin:20px auto
+        }
+        ul li {
+            display:inline-block;
+            padding:10px;
+            border:1px solid red;
+            background:yellow;
+            margin:10px;
+            width:20px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>1~20까지 한줄에 5개씩 출력하기</h1>
+        <ul>
+            {% for i in range(1,21) %}
+            <li>{{i}}</li>
+                {% if i%5==0 %}
+                <br>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>

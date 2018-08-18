@@ -157,20 +157,26 @@ class money():
     def __init__(self,apart,car):
         self.apart = apart
         self.car = car
-    def info(self,apart,car):
-        print(' 부모클래스 1 : ',)
+    def info1(self,apart,car):
+        print(' 부모클래스 1 : ',apart,car)
 
 class money1():
-    def __init__(self,opistel,car):
+    def __init__(self,opistel,scooter):
         self.opistel = opistel
-        self.car = car
-    def info(self,opistel,)
+        self.scooter = scooter
+    def info2(self,opistel,scooter):
+        print(' 부모클래스 2 :',opistel,scooter)
 
-class papa():
-    def __init__(self):
-        pass
-    def info1(self):
-        return '아파트,차'
+class child(money,money1):
+    def __init__(self,apart,car,opistel,scooter):
+        self.apart = apart
+        self.car = car
+        self.opistel = opistel
+        self.scooter = scooter
+
+me = child('아파트','자동차','오피스텔','스쿠터')
+print(me.info1('아파트','자동차'))
+print(me.info2('오피스텔','스쿠터'))
 
 
 

@@ -1,0 +1,30 @@
+<!-- /insertdata.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>sqlite 연동하기</title>
+    <style>
+        form {width:500px;margin:0 auto} 
+        label { display:block; padding:5px; text-align:center }
+
+    </style>
+</head>
+<body>
+<h1>insertdata.html</h1>   
+<ul>
+    <li><a href="/">home</a></li>
+    <li><a href="/showtable">테이블 보기</a></li>
+    <li><a href="/insertdata">데이타 삽입하기</a></li>
+</ul>
+
+<form action="/action" method="POST">
+    <label> username : <input type="text" name="username"></label>
+    <label> userage : <input type="text" name="userage"></label>
+    <label> usergender : <input type="text" name="usergender"></label>
+    <label> usermajor : <input type="text" name="usermajor"></label>
+    <label> <button> 전송 </button></label>
+</form>
+
+</body>
+</html>

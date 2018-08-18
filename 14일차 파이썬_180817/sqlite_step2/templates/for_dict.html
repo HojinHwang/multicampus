@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        #wrap {
+            width:500px;
+            text-align: center;
+            margin:20px auto
+        }
+        ul li { padding:10px; list-style:none}
+        ul li span {
+            display: inline-block;
+            border:1px solid red;
+            background:yellow;
+            width:70px;
+            padding:5px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>딕셔너리 출력하기</h1>
+        <ul>
+            {% for key,value in dic.items() %}
+            <li><span> {{key}} </span>: {{value}} </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>

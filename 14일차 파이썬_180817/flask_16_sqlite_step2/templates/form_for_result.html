@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        #wrap {
+            width:300px;
+            text-align: center;
+            margin:20px auto
+        }
+        ul li {
+            padding:10px;
+            border:1px solid red;
+            list-style:none;
+            border-bottom:none
+        }
+        ul li:last-child {
+            border-bottom:1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>{{num}}구구단 출력하기</h1>
+        <ul>
+            
+            {% for i in range(1,10) %}
+            <li> {{num}} X {{i}} = {{ {{num}}*i }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>플라스크월드</title>
+</head>
+<body>
+    <div id="wrap">
+        <h2>전체 리스트 출력</h2>
+        print({{ result }})
+        <h2>회원정보 출력</h2>
+        <table border="1" cellspacing="0">
+            <thead>
+                <tr>
+                    <td>아이디</td>
+                    <td>이름</td>
+                    <td>이메일</td>
+                    <td>태어난년도</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for team in result %}
+                <tr>
+                    <td>{{ team[0] }}</td>
+                    <td>{{ team[1] }}</td>
+                    <td>{{ team[2] }}</td>
+                    <td>{{ team[3] }}</td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        h1{text-align:center}
+        ul { width:170px; margin:0 auto}
+        li { border-bottom:1px saddlebrown solid; padding:5px}
+        p { text-align: center; font-weight:bold; font-size:2em }
+    </style>
+</head>
+<body>
+    <h1>Score Result</h1>
+    <ul>
+        <li>국어 {{kor}}</li>
+        <li>영어 {{math}}</li>
+        <li>수학 {{eng}}</li>
+        <li>과학 {{sci}}</li>
+        <li>총점 {{tot}}</li>
+        <li>평균 {{avg}}</li>
+    </ul>
+    <p>
+    {% if avg>=70 %}
+    진급 
+    {% else %}
+    다음기회에 도전
+    {% endif %}
+    </p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>플라스크월드</title>
+</head>
+<body>
+    <div id="wrap">
+        <h2>전체 리스트 출력</h2>
+        print({{ result }})
+        <h2>전체 출력</h2>
+        <table border="1" cellspacing="0">
+            <thead>
+                <tr>
+                    <td>title</td>
+                    <td>published date</td>
+                    <td>publisher</td>
+                    <td>pages</td>
+                    <td>recommand</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in result %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- sqlite_index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>sqlite 연동하기</title>
+    <style>
+        /* tableStyle 디자인 */
+        #tableStyle { width:600px; margin:0 auto; 
+                    /* 셀과셀 사이 여백을 0으로 셋팅, 
+                    테두리가 중첩일 경우 1개만 선택. 단일선으로 출력한다.  */
+                    border-collapse:collapse  }
+        #tableStyle tr th { background:cadetblue;padding:5px;
+                    border:1px solid black }
+        #tableStyle tr td { padding:5px; border:1px solid black;
+                        text-align:center}
+    </style>
+</head>
+<body>
+<h1>sqlite table 표시하기</h1>    
+<h2>전체 출력하기</h2>
+<div>{{ result }}</div>
+<hr>
+<h2> genres 테이블 이용해서 출력하기2</h2>
+<!-- table>tr>th*3 -->
+<table id="tableStyle">
+    <tr>
+        <th>GenId</th>
+        <th>Name</th>
+    </tr>
+    <!-- 리스트안에서 컬럼별로 td안에 반복해서 삽입  -->
+    {% for row in result %}
+    <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+    
+</body>
+</html>
