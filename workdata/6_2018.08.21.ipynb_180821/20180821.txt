@@ -1,0 +1,7 @@
+exerd 프로그램 다운
+컬럼 만들기 : ctrl + enter
+
+selenium 설치 : pip install selenium
+구글 -> python seleniun webdriver
+
+#top > nav > ul > li.pypi-meta > a
