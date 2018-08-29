@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-    <style>#map_764ebad080b14438a876597f67217402 {
+    <style>#map_b8f97641d2c9452084064d00ac366e9f {
         position: relative;
         width: 100.0%;
         height: 100.0%;
@@ -26,7 +26,7 @@
 </head>
 <body>    
     
-    <div class="folium-map" id="map_764ebad080b14438a876597f67217402" ></div>
+    <div class="folium-map" id="map_b8f97641d2c9452084064d00ac366e9f" ></div>
 </body>
 <script>    
     
@@ -34,10 +34,10 @@
         var bounds = null;
     
 
-    var map_764ebad080b14438a876597f67217402 = L.map(
-        'map_764ebad080b14438a876597f67217402', {
-        center: [37.500646, 127.036447],
-        zoom: 20,
+    var map_b8f97641d2c9452084064d00ac366e9f = L.map(
+        'map_b8f97641d2c9452084064d00ac366e9f', {
+        center: [36.012827, 129.321488],
+        zoom: 17,
         maxBounds: bounds,
         layers: [],
         worldCopyJump: false,
@@ -47,7 +47,7 @@
 
     
     
-    var tile_layer_9dc2cfdd737243999c180025dd04bc0e = L.tileLayer(
+    var tile_layer_f9ab0aefda63464498afe661ed344994 = L.tileLayer(
         'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         {
         "attribution": null,
@@ -57,5 +57,28 @@
         "minZoom": 0,
         "noWrap": false,
         "subdomains": "abc"
-}).addTo(map_764ebad080b14438a876597f67217402);
+}).addTo(map_b8f97641d2c9452084064d00ac366e9f);
+    
+        var marker_b4c5be57ad5d4816ae0d90d02c607983 = L.marker(
+            [36.012827, 129.321488],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_b8f97641d2c9452084064d00ac366e9f);
+        
+    
+            var popup_2b9ba550b1cc48968deacd76ace5bd4b = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ff31422555a94240a7e055fb5bdd81fd = $('<div id="html_ff31422555a94240a7e055fb5bdd81fd" style="width: 100.0%; height: 100.0%;">my current position</div>')[0];
+                popup_2b9ba550b1cc48968deacd76ace5bd4b.setContent(html_ff31422555a94240a7e055fb5bdd81fd);
+            
+
+            marker_b4c5be57ad5d4816ae0d90d02c607983.bindPopup(popup_2b9ba550b1cc48968deacd76ace5bd4b)
+            ;
+
+            
+        
 </script>
